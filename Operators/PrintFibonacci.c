@@ -1,12 +1,17 @@
 #include <stdio.h>
 int main ()
 {
-    int sec;
-    printf("Enter time in seconds : ");
-    scanf("%d", &sec);
-    int hours=sec/3600;
-    int minutes =(sec%3600)/60;
-    int seconds =(sec%3600)%60;
-    printf("The time is %d hours, %d minutes and %d seconds ", hours, minutes , seconds);
+    int n,a=0,b=1,new=0;
+    printf("Enter the number of terms to be printed of a fibonacci series: ");
+    scanf("%d",&n);
+    printf("The series up to %d terms is\n",n);
+    for(int i=1;i<=n;i++)
+    {
+        new=a+b;
+        printf("%d ",a);
+        a=b;
+        b=new;
+        
+    }
     return 0;
 }
