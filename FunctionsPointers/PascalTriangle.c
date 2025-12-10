@@ -7,7 +7,7 @@ int factorial(int a){
     }
     return fac;
 }
-combination(int n,int r){
+int combination(int n,int r){
     int nfac=factorial(n);
     int rfac=factorial(r);
     int nrfac=factorial(n-r);
