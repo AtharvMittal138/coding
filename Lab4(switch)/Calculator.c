@@ -14,7 +14,7 @@ int main(){
     add=a+b;
     sub=a-b;
     mul=a*b;
-    div=a/b;
+    
     switch(choice)
     {
         case 1: printf("The addition of two numbers is :%lf",add);
@@ -23,7 +23,15 @@ int main(){
         break;
         case 3: printf("The multiplication of two numbers is :%lf",mul);
         break;
-        case 4: printf("The division of two numbers is :%lf",div);
+        case 4:
+        {   if(b==0)
+            printf("Cannot divide by 0");
+            else
+            { 
+             div=a/b;
+             printf("The division of two numbers is :%lf",div);
+            }
+        }
         break;
         default: printf("Wrong Input");
     }
