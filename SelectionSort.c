@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main(){
+    int n,small,temp,m;
+    printf("Enter the number of elements: ");
+    scanf("%d",&n);
+    int arr[n];
+    printf("Enter the %d elements which is to be sorted\n",n);
+    for(int i=0;i<n;i++)
+    scanf("%d",&arr[i]);
+    for(int i=0;i<n-1;i++)
+    {
+        small=arr[i];
+        for(int j=i;j<n-1;j++)
+        {
+            if(arr[j]>arr[j+1])
+            { 
+            small=arr[j+1];
+            m=j+1;
+            }
+        }
+        temp = arr[m];
+        arr[m]=arr[i];
+        arr[i]=temp;
+    }
+    printf("The elements after sorting is: \n");
+    for(int i=0;i<n;i++)
+    printf("%d ",arr[i]);
+    return 0;
+}
