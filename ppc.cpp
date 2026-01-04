@@ -20,7 +20,8 @@ int main()
     if (pos >= 0) 
     {
         for (int i = n - 1; i > 0; i--) {
-            if (arr[i] > arr[pos]) {
+            if (arr[i] > arr[pos])
+            {
                 int temp = arr[i];
                 arr[i] = arr[pos];
                 arr[pos] = temp;
